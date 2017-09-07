@@ -569,6 +569,15 @@ public class PositionDao {
 		return position;
 	}
 
+	/**
+	 *
+	 * 计算雷达威力
+	 * @param radarAltitude 雷达高程
+	 * @param detect_radius 探测半径
+	 * @param H 高度
+	 * @param step 步长
+	 * @throws SQLException
+	 */
 	public void computeRadarPower(double radarAltitude, double detect_radius,
 			double H, double step) throws SQLException {
 		List<Position> positions = new ArrayList<Position>();
@@ -610,6 +619,10 @@ public class PositionDao {
 		batchinsertDrawablePosition(batchSql.toString());
 	}
 
+	/**
+	 * 插入用来绘制不规则多边形的点
+	 * @param batchSql
+	 */
 	private synchronized void batchinsertDrawablePosition(String batchSql) {
 		Statement ste = null;
 		try {
@@ -647,6 +660,10 @@ public class PositionDao {
 //		// prep.executeBatch();
 //	}
 
+	/**
+	 * 批量插入地图点数据
+	 * @param batchSql
+	 */
 	public synchronized void batchInsertPosition(String batchSql) {
 		System.out.println(batchSql.length() + ";批量插入position");
 		Statement ste = null;

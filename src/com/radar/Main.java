@@ -36,7 +36,7 @@ public class Main {
 		}
 		try {
 			for (PositionInfoCumpute item : threads) {
-				item.join();
+				item.join();//等待子线程执行完毕
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
