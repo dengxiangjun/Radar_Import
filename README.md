@@ -3,4 +3,5 @@
 1. 初始化雷达战地环境统计系统的所有表 
 2. 导入地图的数据和计算与雷达的距离、方位角等， 并存入Position表中。 
 3. 导入完成后，计算雷达探测视距，保存到DrawablePosition表中。
+
 Config.java为相关配置 Main.java为main函数，配置号相关参数，执行main函数即可
